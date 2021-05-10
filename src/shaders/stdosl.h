@@ -470,7 +470,7 @@ closure color debug(string tag) BUILTIN;
 closure color holdout() BUILTIN;
 closure color subsurface(float eta, float g, color mfp, color albedo) BUILTIN;
 
-// ******************* MATERIALX PBS LIBRARY CLOSURES - DRAFT BEGIN ******************* //
+#ifdef MATERIALX_CLOSURES
 
 // -------------------------------------------------------------//
 // BSDF closures                                                //
@@ -697,7 +697,7 @@ closure color layer(closure color top, closure color base) BUILTIN;
 //
 void artistic_ior(color reflectivity, color edge_tint, output color ior, output color extinction);
 ​
-// ******************* MATERIALX PBS LIBRARY CLOSURES - DRAFT END ******************* //
+#endif // MATERIALX_CLOSURES
 
 // Renderer state
 int backfacing () BUILTIN;
